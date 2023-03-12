@@ -63,6 +63,7 @@ function checkValues(r, g, b, actualRGB) {
 const [r, g, b] = generateRandomRGB();
 const actualRGB = [r, g, b];
 const rgbValue = `rgb(${r}, ${g}, ${b})`;
+let tries = 0
 // const complementValue = `rgb(${getComplement([r, g, b]).join(", ")})`;
 
 document.getElementById("box").style.backgroundColor = rgbValue;
@@ -72,12 +73,15 @@ document.getElementById("box").style.backgroundColor = rgbValue;
 
 const submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", () => {
+	tries += 1
+	const triesDiv = document.getElementById("tries");
+	triesDiv.innerHTML = "TRIES: " + tries
 	const redInput = document.getElementById("red").value;
 	const greenInput = document.getElementById("green").value;
 	const blueInput = document.getElementById("blue").value;
 	const userRGB = `rgb(${redInput}, ${greenInput}, ${blueInput})`;
 	document.getElementById("userBox").style.backgroundColor = userRGB;
 	const results = checkValues(redInput, greenInput, blueInput, actualRGB);
-	const resultDiv = document.getElementById("result");
+	const resultDiv = document.getElementById("result");	
 	resultDiv.innerHTML = results.join("<br>");
 });
