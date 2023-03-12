@@ -21,3 +21,7 @@ input{
 .container {
       display: flex;
     }
+#tries {
+	margin-top: 10px;
+	font-weight: 800;
+}
