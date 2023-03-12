@@ -29,7 +29,8 @@ function checkValues(r, g, b, actualRGB) {
 		result.push("LOWER");
 	}
 	return result;
-} function checkValues(r, g, b, actualRGB) {
+} 
+function checkValues(r, g, b, actualRGB) {
 	const result = [];
 	if (r > actualRGB[0]) {
 		result.push("GO LOWER");
