@@ -2,6 +2,7 @@ html {
   height: 100%;
   width: 100%;
 }
+
 input{
 	border: solid black;
 	width: 50px;
@@ -22,6 +23,10 @@ input{
       display: flex;
     }
 #tries {
+	margin-top: 10px;
+	font-weight: 800;
+}
+#score {
 	margin-top: 10px;
 	font-weight: 800;
 }
